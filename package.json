@@ -1,0 +1,14 @@
+{
+  "name": "simondice",
+  "version": "1.0.0",
+  "description": "juego de simon dice para r/argentina programa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lucas tenchini",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
