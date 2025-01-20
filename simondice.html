@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simón Dice</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #212529;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .tablero-container {
+            text-align: center;
+            background-color: #343a40;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        .color-button {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 15px;
+            opacity: 0.5;
+            cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .color-button:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.6em;
+            margin-top: 20px;
+        }
+        .btn-start {
+            font-size: 1.2em;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #ffcc00;
+            color: #212529;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .btn-start:hover {
+            background-color: #ffc107;
+        }
+        .col-sm-2{
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
+
+<div class="tablero-container">
+    <h1>Simón Dice</h1>
+    <p id="instructions">¡Sigue las instrucciones de Simón!</p>
     
+    
+    <div class="button-container">
+        <div id="cuadro-1" class="color-button cuadro" style="background-color: #28a745;">A</div>
+        <div id="cuadro-2" class="color-button cuadro" style="background-color: #dc3545;">B</div>
+        <div id="cuadro-3" class="color-button cuadro" style="background-color: #007bff;">C</div>
+        <div id="cuadro-4" class="color-button cuadro" style="background-color: #ffc107;">D</div>
+        <div class="col-sm-2">
+            <p>Ronda # <strong id="ronda">0</strong></p>
+        </div>
+    </div>
+    
+    
+    <div class="message" id="estado">Listo para jugar!</div>
+    
+    
+    <button class="btn btn-start" id="Boton-iniciar">Iniciar Juego</button>
+</div>
+
+
+<script>
+</script>
+
+
 </body>
 </html>
