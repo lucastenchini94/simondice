@@ -95,6 +95,17 @@
 
 
 <script>
+    let secuenciaMaquina = [];
+    let secuenciaUsuario = [];
+    let ronda = 0;
+    
+
+    document.querySelector("button").onclick = function () {
+        reiniciarEstado();
+
+
+    }
+    
     function actualziarEstado(estado) {
         const $estado = document.querySelector("#estado");
         $estado.textContent = estado;
@@ -109,6 +120,12 @@
         const $cuadro = document.querySelectorAll(".cuadro");
         const indice = Math.floor(Math.random()*$cuadro.length);
         return $cuadro[indice];
+    }
+    function bloquearInputUsuario() {
+    document.querySelectorAll('.cuadro').forEach(function($cuadro) {
+      $cuadro.onclick = function() {
+      };
+     });
     }
     function resaltar($cuadro) {
     $cuadro.style.opacity = 1;
