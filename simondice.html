@@ -95,6 +95,27 @@
 
 
 <script>
+    function actualziarEstado(estado) {
+        const $estado = document.querySelector("#estado");
+        $estado.textContent = estado;
+        
+    }
+    function reiniciarEstado() {
+        let secuenciaMaquina = [];
+        let secuenciaUsuario = [];
+        let ronda = 0;
+    }
+    function cuadroAleatorio() {
+        const $cuadro = document.querySelectorAll(".cuadro");
+        const indice = Math.floor(Math.random()*$cuadro.length);
+        return $cuadro[indice];
+    }
+    function resaltar($cuadro) {
+    $cuadro.style.opacity = 1;
+    setTimeout(function() {
+      $cuadro.style.opacity = 0.5;
+    }, 500);
+  }
 </script>
 
 
