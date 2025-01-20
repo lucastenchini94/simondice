@@ -102,10 +102,21 @@
 
     document.querySelector("button").onclick = function () {
         reiniciarEstado();
+        manejarRonda();
 
 
     }
     
+    function manejarRonda() {
+        actualziarEstado("turno de la maquina");
+        bloquearInputUsuario();
+
+        $nuevoCuadro = cuadroAleatorio();
+        secuenciaMaquina = $nuevoCuadro;
+
+
+
+    }
     function actualziarEstado(estado) {
         const $estado = document.querySelector("#estado");
         $estado.textContent = estado;
